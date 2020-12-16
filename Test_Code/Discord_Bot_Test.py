@@ -7,6 +7,20 @@ def Flip_coin():
     else:
         print('Tails')
 
+def Random_team():
+    people = ["Garret", "Sam", "Tobin", "Zack", "Russ"]
+    number_people = len(people)
+    number_of_teams = int(input("Please enter in the number of teams. "))
+    while number_people > 0 and number_of_teams > 0:
+        team = random.sample(people, int(number_people/number_of_teams))
+        for x in team:
+            people.remove(x)
+            number_people -= int(number_people/number_of_teams)
+            number_of_teams -= 1
+        print(team)
+    print(people)
+
+
 def Display_menu():
     print("Welcome to our shit Discord bot, please enter command from the following. ")
     print("")
@@ -31,7 +45,12 @@ def Get_user_Command():
         Display_menu()
         print(" ")
         Get_user_Command()
-            
+
+    if command == "!randt":
+        Random_team()
+        print(" ")
+        Get_user_Command()
+
     if command == "!quit":
         print("Goodbye cunt")
 

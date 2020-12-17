@@ -1,16 +1,10 @@
-# update code
+import os
 
-# file_loc = file destination
+def deleteDir(dir):
+    os.system("rm -rf " + dir)
 
-#def shutDownBot():
-#just stop the code from running
-
-#def startBot():
-#start the bot after all the files have been downloaded into the area
-
-# def update():
-# remove all files
-# upload all files?
-
-#call function
-
+def mk_bot_dir():
+    os.system("mkdir Desktop/bot/Bot")
+    
+def cloneRepo(dir,addy):
+    os.system("put clone shit here")
